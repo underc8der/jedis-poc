@@ -20,4 +20,20 @@ public class RestPreferenceServiceImpl implements RestPreferenceService {
 				.build();
 	}
 
+	@Override
+	public Response deletePreference(String id) {
+		preference.deleteCharacters(id);
+		return Response
+				.noContent()
+				.build();
+	}
+	
+	@Override
+	public Response deletePreference() {
+		preference.deleteCharacters();
+		return Response
+				.noContent()
+				.build();
+	}
+
 }
